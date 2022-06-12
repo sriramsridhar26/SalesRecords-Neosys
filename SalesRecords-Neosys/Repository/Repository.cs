@@ -54,7 +54,11 @@ namespace SalesRecords_Neosys.Repository
             return (IList<T>)records;
         }
         public async Task<IList<T>> GetGreater(int page, int val)
-        {
+        { 
+            if(val > _db.SalesRecords.Max(p => p.TotalProfit))
+            {
+                return null;
+            }
             var records = await _db.SalesRecords
                                 .Where(p => p.TotalProfit > val)
                                 .OrderBy(p => p.id)
@@ -65,6 +69,10 @@ namespace SalesRecords_Neosys.Repository
         }
         public async Task<IList<T>> GetLesser(int page, int val)
         {
+            if (val > _db.SalesRecords.Min(p => p.TotalProfit))
+            {
+                return null;
+            }
             var records = await _db.SalesRecords
                                 .Where(p => p.TotalProfit < val)
                                 .OrderBy(p => p.id)
