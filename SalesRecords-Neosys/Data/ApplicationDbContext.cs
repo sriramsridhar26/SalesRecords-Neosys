@@ -7,7 +7,6 @@ namespace SalesRecords_Neosys.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
         }
         public DbSet<SalesRecord> SalesRecords { get; set; } 
     }

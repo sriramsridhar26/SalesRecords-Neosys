@@ -11,7 +11,6 @@ namespace SalesRecords_Neosys.Repository
         public UnitofWork(ApplicationDbContext databaseContext)
         {
             _databaseContext = databaseContext;
-            //_db = databaseContext.Database;
         }
         public IRepository<SalesRecord> SalesRecords => _salesRecords ??= new Repository<SalesRecord>(_databaseContext);
 

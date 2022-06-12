@@ -3,16 +3,6 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace SalesRecords_Neosys.Model
 {
-    //public enum Channel
-    //{
-    //    NA,
-    //    Online,
-    //    Offline
-    //}
-    //public enum Priority
-    //{
-    //    C, H, L, M
-    //}
     public class SalesRecord
     {
         [Key]

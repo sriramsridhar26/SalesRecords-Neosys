@@ -69,7 +69,7 @@ namespace SalesRecords_Neosys.Repository
         }
         public async Task<IList<T>> GetLesser(int page, int val)
         {
-            if (val > _db.SalesRecords.Min(p => p.TotalProfit))
+            if (val < _db.SalesRecords.Min(p => p.TotalProfit))
             {
                 return null;
             }
