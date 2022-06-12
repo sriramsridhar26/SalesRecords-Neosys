@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using SalesRecords_Neosys.Configurations;
 using SalesRecords_Neosys.Data;
 using SalesRecords_Neosys.Repository;
 using SalesRecords_Neosys.Repository.IRepository;
@@ -18,7 +17,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
-builder.Services.AddAutoMapper(typeof(MapperInitializer));
 builder.Services.AddScoped<IUnitofWork, UnitofWork>();
 
 var app = builder.Build();

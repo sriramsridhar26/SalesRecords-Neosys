@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using SalesRecords_Neosys.Configurations;
 using SalesRecords_Neosys.DTO;
 using SalesRecords_Neosys.Model;
 using SalesRecords_Neosys.Repository.IRepository;
